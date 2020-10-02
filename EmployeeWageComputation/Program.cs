@@ -1,9 +1,12 @@
-﻿using System;
+﻿using EmployeeWage;
+using System;
+using System.Collections.Generic;
 
-namespace EmployeeWageComputation
+namespace Employee_Wage_calc_Problem
 {
     class Program
     {
+        //constants
 
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
