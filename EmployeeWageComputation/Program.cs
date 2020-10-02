@@ -1,58 +1,62 @@
-﻿using System;
+﻿using EmployeeWage;
+using System;
+using System.Collections.Generic;
 
-namespace EmployeeWageComputation
+namespace Employee_Wage_calc_Problem
 {
     class Program
     {
+        //constants
+
+        const int IS_FULL_TIME = 1;
+        const int IS_PART_TIME = 2;
+
 
         static void Main(string[] args)
         {
-            Random rand = new Random();
 
-            //constants
+            //Constants
 
-            const int IS_FULL_TIME = 1;
-            const int IS_PART_TIME = 2;
-            const int TOTAL_WORKING_HOURS = 100;
-            const int TOTAL_WORKING_DAYS = 20;
-            const int WAGE_PER_HOUR = 20;
+            const int ADDCompany = 1;
+            //const int CALCWage = 2;
 
-            //variable
+            EmpWageBuilder ew = new EmpWageBuilder();
 
-            int numberOfHours = 0;
-            int workingDays = 0;
-            int total_wage = 0;
+            bool loop = true;
 
-
-            while (numberOfHours <= TOTAL_WORKING_HOURS && workingDays <= TOTAL_WORKING_DAYS)
+            while (loop)
             {
-                int type = rand.Next(0, 3);
-                int hours = 0;
-                switch (type)
+                Console.WriteLine("1. Add Company and Caluclate Wage\n2.Exit");
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+                switch (choose)
                 {
-                    case IS_FULL_TIME:
-                        hours = 8;
-                        break;
-                    case IS_PART_TIME:
-                        hours = 4;
-                        break;
-                    default:
-                        hours = 0;
+
+                    case ADDCompany:
+
+                        Random random = new Random();
+                        int empType = random.Next(1, 3);
+
+
+                        Company company = ew.AddCompany("Apple", 120, 20, 100);
+                        ew.CalculateWage(company);
+
+                        company = ew.AddCompany("Google", 100, 25, 150);
+                        ew.CalculateWage(company);
                         break;
 
+                    default:
+                        loop = false;
+                        break;
                 }
 
-                numberOfHours += hours;
+                Console.Out.WriteLine("\n**************************************\n");
 
-                workingDays++;
-
-                Console.Out.WriteLine("Day " + workingDays + " hours " + hours);
             }
 
-            total_wage = numberOfHours * WAGE_PER_HOUR;
 
-            Console.Out.WriteLine("Total wage of the month :" + total_wage);
 
         }
     }
 }
+
