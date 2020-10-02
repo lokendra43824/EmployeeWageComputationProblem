@@ -7,6 +7,7 @@ namespace EmployeeWage
     class Company
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         String company;
         Double empRatePerHour;
         Double numOfWorkingDays;
@@ -31,6 +32,8 @@ namespace EmployeeWage
     }
 }
 =======
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
         //getters and setters for the instance variables
 
         public String CompName { get; set; }
@@ -55,4 +58,7 @@ namespace EmployeeWage
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage

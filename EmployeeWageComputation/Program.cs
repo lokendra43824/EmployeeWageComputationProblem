@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace EmployeeWage
 =======
 namespace Employee_Wage_calc_Problem
@@ -11,10 +12,14 @@ namespace Employee_Wage_calc_Problem
 =======
 namespace Employee_Wage_calc_Problem
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
+=======
+namespace Employee_Wage_calc_Problem
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
 {
     class Program
     {
         //constants
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -31,6 +36,8 @@ namespace Employee_Wage_calc_Problem
 =======
 =======
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
 
         const int IS_FULL_TIME = 1;
         const int IS_PART_TIME = 2;
@@ -38,6 +45,7 @@ namespace Employee_Wage_calc_Problem
 
         static void Main(string[] args)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             //Variables
             Double empRatePerHour = 0;
@@ -81,19 +89,39 @@ namespace Employee_Wage_calc_Problem
 
             while (loop)
             {
+=======
+
+            //Constants
+
+            const int ADDCompany = 1;
+            //const int CALCWage = 2;
+
+            EmpWageBuilder ew = new EmpWageBuilder();
+
+            bool loop = true;
+
+            while (loop)
+            {
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
                 Console.WriteLine("1. Add Company and Caluclate Wage\n2.Exit");
                 int choose = Convert.ToInt32(Console.ReadLine());
 
                 switch (choose)
+<<<<<<< HEAD
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
                 {
 
                     case ADDCompany:
 
+<<<<<<< HEAD
                         Random random = new Random();
                         int empType = random.Next(1, 3);
 
 
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
                         Company company = ew.AddCompany("Apple", 120, 20, 100);
                         ew.CalculateWage(company);
 
@@ -106,6 +134,7 @@ namespace Employee_Wage_calc_Problem
                         break;
                 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 numberOfHours += hours;
 
@@ -149,6 +178,12 @@ namespace Employee_Wage_calc_Problem
 
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
 
+=======
+                Console.Out.WriteLine("\n**************************************\n");
+
+            }
+
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
         }
     }
 }

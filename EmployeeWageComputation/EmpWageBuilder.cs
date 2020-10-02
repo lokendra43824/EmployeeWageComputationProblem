@@ -5,6 +5,7 @@ using System.Text;
 namespace EmployeeWage
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     class EmpWageBuilder : IEmpWageCal
     {
         List<Company> companyList;
@@ -35,6 +36,8 @@ namespace EmployeeWage
     }
 }
 =======
+=======
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
 
     class EmpWageBuilder : IEmpWageCal
     {
@@ -111,6 +114,10 @@ namespace EmployeeWage
         }
 
     }
+<<<<<<< HEAD
 }
 
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
+=======
+}
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage

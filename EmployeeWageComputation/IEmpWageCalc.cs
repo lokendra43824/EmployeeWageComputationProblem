@@ -11,4 +11,8 @@ namespace EmployeeWage
         // Double getTotalWage(string company);
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
