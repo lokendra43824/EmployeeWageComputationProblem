@@ -6,6 +6,7 @@ namespace EmployeeWage
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     class EmpWageBuilder : IEmpWageCal
     {
         List<Company> companyList;
@@ -38,6 +39,8 @@ namespace EmployeeWage
 =======
 =======
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+>>>>>>> uc-14-company-wise-total-wage
 
     class EmpWageBuilder : IEmpWageCal
     {
@@ -99,13 +102,23 @@ namespace EmployeeWage
 
                 numberOfHours += hours;
 
+<<<<<<< HEAD
                 Console.Out.WriteLine(company.CompName + " Day " + workingDays + " hours " + hours);
+=======
+                // Adding daily wage
+                company.DailyWage.Add(hours * company.WagePerHour);
+
+                Console.Out.WriteLine(company.CompName + " Day " + workingDays + " hours " + hours + " Daily wage: " + (hours * company.WagePerHour));
+>>>>>>> uc-14-company-wise-total-wage
 
                 workingDays++;
             }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> uc-14-company-wise-total-wage
             totalWage = numberOfHours * company.WagePerHour;
 
             Console.Out.WriteLine("\nTotal Wage for the month is: " + totalWage);
@@ -113,6 +126,7 @@ namespace EmployeeWage
             company.MonthlyTotalWage = totalWage;
         }
 
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 }
@@ -121,3 +135,25 @@ namespace EmployeeWage
 =======
 }
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+        public double GetTotalWage(string compName)
+        {
+            double totalWage = 0;
+
+
+            foreach (Company comp in listOfCompnies)
+            {
+                if (comp.CompName.Equals(compName))
+                {
+                    totalWage = comp.MonthlyTotalWage;
+                }
+            }
+
+            return totalWage;
+
+
+        }
+
+    }
+}
+>>>>>>> uc-14-company-wise-total-wage

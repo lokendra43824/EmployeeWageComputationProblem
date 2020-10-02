@@ -8,6 +8,7 @@ namespace EmployeeWage
     {
         Company AddCompany(String company, Double empRatePerHour, int numOfWorkingDays, int workingHrs);
 
+<<<<<<< HEAD
         // Double getTotalWage(string company);
 
     }
@@ -16,3 +17,9 @@ namespace EmployeeWage
 =======
 }
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+        Double GetTotalWage(String companyName);
+
+    }
+}
+>>>>>>> uc-14-company-wise-total-wage

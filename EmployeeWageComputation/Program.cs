@@ -5,6 +5,7 @@ using System.Collections.Generic;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace EmployeeWage
 =======
 namespace Employee_Wage_calc_Problem
@@ -15,10 +16,14 @@ namespace Employee_Wage_calc_Problem
 =======
 namespace Employee_Wage_calc_Problem
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+namespace Employee_Wage_calc_Problem
+>>>>>>> uc-14-company-wise-total-wage
 {
     class Program
     {
         //constants
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,10 +116,32 @@ namespace Employee_Wage_calc_Problem
 >>>>>>> uc-11-manage-employee-wage-using-api-approach
 =======
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+
+        static void Main(string[] args)
+        {
+
+            //Constants
+
+            const int ADDCompany = 1;
+            const int GetCompWage = 2;
+
+            EmpWageBuilder ew = new EmpWageBuilder();
+
+            bool loop = true;
+
+            while (loop)
+            {
+                Console.WriteLine("1. Add Company and Caluclate Wage\n2.Get total monthly wage of a company \n3.Exit");
+                int choose = Convert.ToInt32(Console.ReadLine());
+
+                switch (choose)
+>>>>>>> uc-14-company-wise-total-wage
                 {
 
                     case ADDCompany:
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                         Random random = new Random();
                         int empType = random.Next(1, 3);
@@ -122,11 +149,30 @@ namespace Employee_Wage_calc_Problem
 
 =======
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+>>>>>>> uc-14-company-wise-total-wage
                         Company company = ew.AddCompany("Apple", 120, 20, 100);
                         ew.CalculateWage(company);
 
                         company = ew.AddCompany("Google", 100, 25, 150);
                         ew.CalculateWage(company);
+<<<<<<< HEAD
+=======
+                        break;
+                    case GetCompWage:
+
+                        Console.Out.WriteLine("Enter the company to get total wage");
+                        String name = Console.ReadLine();
+                        double monthlyWage = ew.GetTotalWage(name);
+                        if (monthlyWage > 0)
+                        {
+                            Console.Out.WriteLine(name + "'s Monthly total wage is: " + monthlyWage);
+                        }
+                        else
+                        {
+                            Console.Out.WriteLine("Invalid Company Name");
+                        }
+>>>>>>> uc-14-company-wise-total-wage
                         break;
 
                     default:
@@ -134,6 +180,7 @@ namespace Employee_Wage_calc_Problem
                         break;
                 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 numberOfHours += hours;
@@ -184,7 +231,14 @@ namespace Employee_Wage_calc_Problem
             }
 
 >>>>>>> uc-12-Add-list-of-multiple-companies-to-manage-employee-wage
+=======
+                Console.Out.WriteLine("\n**************************************\n");
+
+            }
+
+
+
+>>>>>>> uc-14-company-wise-total-wage
         }
     }
 }
-
