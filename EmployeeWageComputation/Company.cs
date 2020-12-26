@@ -16,6 +16,7 @@ namespace EmployeeWageComputation
         public int MonthlyTotalWage { get; set; }
 
 
+
         //company constructor
         public Company(String compName, int wagePerHour, int totalWorkingDays, int totalWorkingHours)
         {
@@ -23,8 +24,7 @@ namespace EmployeeWageComputation
             this.WagePerHour = wagePerHour;
             this.TotalWorkingDays = totalWorkingDays;
             this.TotalWorkingHours = totalWorkingHours;
-            this.MonthlyTotalWage = 0;
-
         }
+
     }
 }
